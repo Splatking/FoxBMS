@@ -62,6 +62,7 @@ def build(bld):
             bld.env.balancing_strategy,
             f"bal_strategy_{bld.env.balancing_strategy}.c",
         ),
+        os.path.join("flashing_light", "flashing_light.c"),
     ]
     includes = [
         "config",

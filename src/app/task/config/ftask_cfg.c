@@ -342,3 +342,19 @@ extern void FTSK_RunUserCodeIdle(void) { /* user code */
 /*========== Externalized Static Function Implementations (Unit Test) =======*/
 #ifdef UNITY_UNIT_TEST
 #endif
+
+//EDIT ZONE
+#include "flashing_light.h"
+
+static void MyTaskTrigger(void) {
+    MYM_Trigger();  // Call your flashing logic
+}
+
+// Then register it in the task list:
+const TASK_CYCLIC_CALLBACK_FUNCTIONS_s cyclic_task_functions[] = {
+    {
+        .callback = MyTaskTrigger,
+        .cycleTime_ms = 100,
+    },
+    // other tasks...
+};
