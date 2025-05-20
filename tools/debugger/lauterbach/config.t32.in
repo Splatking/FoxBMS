@@ -1,0 +1,17 @@
+; Environment variables
+OS=
+ID=T32
+TMP=@TMP@
+SYS=@SYS@
+
+@TCP@
+
+;SCREEN=
+;MWI
+
+PBI=
+USB
+CONNECTIONMODE=AUTOABORT
+
+; Printer settings
+PRINTER=WINDOWS
